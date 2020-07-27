@@ -1,0 +1,12 @@
+<% if @included %>
+  <% if @english_word %>
+  <p>Congratulation! <%= @word %> is a valid English word.</p>
+  <% else %>
+  <p>Sorry but <%= @word %> does not seem to be an English word.</p>
+  <% end %>
+<% else %>
+  <p>Sorry, but <%= @word %> can’t be built out of <%= @grid %>.</p>
+<% end %>
+
+<br>
+<%= link_to "Play again", new_path %>
